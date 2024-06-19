@@ -12,6 +12,13 @@ local function PrisonLife()
    local TeleportationTab = Window:NewTab("Teleportation")
    local CreditsTab = Window:NewTab("Credits")
 
+   LocalPlayerTab:NewSlider("WalkSpeed", "Makes your faster", 16, 500, function(v)
+      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+   end)
+
+   LocalPlayerTab:NewSlider("JumpPower", "Makes your jump power high", 50, 500, function(v)
+      game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+   end)
 
     LocalPlayerTab:NewButton("Guards", "Become a guards team", function()
       game.Workspace.Remote.TeamEvent:FireServer("Bright blue")
@@ -127,7 +134,7 @@ local function PrisonLife()
     end)
 
     
-   CombatTab:newButton("Crash Server", "makes your server crash", function()
+   CombatTab:NewButton("Crash Server", "makes your server crash", function()
       local Start = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"].ITEMPICKUP.CFrame
@@ -139,7 +146,7 @@ local function PrisonLife()
       Crash()
    end)
 
-   CombatTab:newButton("M9", "Get the M9", function()
+   CombatTab:NewButton("M9", "Get the M9", function()
          local Start = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Prison_ITEMS"].giver.M9.ITEMPICKUP.CFrame
@@ -149,7 +156,7 @@ local function PrisonLife()
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Start
    end)
 
-   CombatTab:newButton("Remington 870", "Get the Remington 870", function()
+   CombatTab:NewButton("Remington 870", "Get the Remington 870", function()
          local Start = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"].ITEMPICKUP.CFrame
@@ -159,7 +166,7 @@ local function PrisonLife()
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Start
    end)
 
-   CombatTab:newButton("AK-47", "Get the AK-47", function()
+   CombatTab:NewButton("AK-47", "Get the AK-47", function()
          local Start = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Prison_ITEMS"].giver["AK-47"].ITEMPICKUP.CFrame
@@ -169,7 +176,7 @@ local function PrisonLife()
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Start
    end)
 
-   UtilitiesTab:newToggle("Doors", "Toggle for doors", true, function()
+   UtilitiesTab:NewToggle("Doors", "Toggle for doors", true, function()
          if game.Workspace:FindFirstChild("Doors") then
             game.Workspace.Doors.Parent = game.Lighting
          else
@@ -177,7 +184,7 @@ local function PrisonLife()
          end
    end)
 
-   UtilitiesTab:newToggle("Fences", "Toggle for fences", true, function()
+   UtilitiesTab:NewToggle("Fences", "Toggle for fences", true, function()
       if game.Workspace:FindFirstChild("Prison_Fences") then
          game.Workspace.Prison_Fences.Parent = game.Lighting
       else
