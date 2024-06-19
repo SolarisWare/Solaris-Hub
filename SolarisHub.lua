@@ -187,7 +187,7 @@ local function PrisonLife()
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Start
    end)
 
-   UtilitiesSection:NewToggle("Doors", "Toggle for doors", true, function()
+   UtilitiesSection:NewToggle("Doors", "Toggle for doors", function()
          if game.Workspace:FindFirstChild("Doors") then
             game.Workspace.Doors.Parent = game.Lighting
          else
@@ -195,7 +195,7 @@ local function PrisonLife()
          end
    end)
 
-   UtilitiesSection:NewToggle("Fences", "Toggle for fences", true, function()
+   UtilitiesSection:NewToggle("Fences", "Toggle for fences", function()
       if game.Workspace:FindFirstChild("Prison_Fences") then
          game.Workspace.Prison_Fences.Parent = game.Lighting
       else
