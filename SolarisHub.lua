@@ -1,3 +1,4 @@
+local Player = game.Players.LocalPlayer
 local StarterGui = game:GetService("StarterGui")
 local UserInputService = game:GetService("UserInputService")
 
@@ -267,6 +268,8 @@ end)
 
       if UserInputService.TouchEnabled then
          local ToggleBtn = Instance.new("ImageButton")
+
+         ToggleBtn.Parent = Player.PlayerGui
 
          ToggleBtn.MouseButton1Click:Connect(function()
             Library:ToggleUI()
