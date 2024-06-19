@@ -5,7 +5,7 @@ local function PrisonLife()
    
    local Window = Library.CreateLib("Solaris Hub", "DarkTheme")
 
-   local LocalPlayerTab = Window:newse("Local Player")
+   local LocalPlayerTab = Window:NewTab("Local Player")
    local CombatTab = Window:NewTab("Combat")
    local UtilitiesTab = Window:NewTab("Utilities")
    local MiscellaneousTab = Window:NewTab("Miscellaneous")
