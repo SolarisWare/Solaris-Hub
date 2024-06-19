@@ -15,7 +15,7 @@ local function PrisonLife()
    local LocalPlayerSection = LocalPlayerTab:NewSection("Local Player")
    local CombatSection = CombatTab:NewSection("Combat")
    local UtilitiesSection = UtilitiesTab:NewSection("Utilities")
-   local MiscellaneousSection = MiscellaneousTab:NewSection("Miscellaneous")
+   local MiscellaneousSection = LocalPlayerTab:NewSection("Miscellaneous")
    local TeleportationSection = TeleportationTab:NewSection("Teleportation")
    local CreditsSection = CreditsTab:NewSection("Credits")
 
