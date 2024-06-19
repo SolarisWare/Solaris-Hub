@@ -5,12 +5,12 @@ local function PrisonLife()
    
    local Window = Library.CreateLib("Solaris Hub", "DarkTheme")
 
-   local LocalPlayerTab = Window:NewTab("Local Player")
-   local CombatTab = Window:NewTab("Combat")
-   local UtilitiesTab = Window:NewTab("Utilities")
-   local MiscellaneousTab = Window:NewTab("Miscellaneous")
-   local TeleportationTab = Window:NewTab("Teleportation")
-   local CreditsTab = Window:NewTab("Credits")
+   local LocalPlayerTab = Window:NewSection("Local Player")
+   local CombatTab = Window:NewSection("Combat")
+   local UtilitiesTab = Window:NewSection("Utilities")
+   local MiscellaneousTab = Window:NewSection("Miscellaneous")
+   local TeleportationTab = Window:NewSection("Teleportation")
+   local CreditsTab = Window:NewSection("Credits")
 
    LocalPlayerTab:NewSlider("WalkSpeed", "Makes your faster", 16, 500, function(v)
       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
