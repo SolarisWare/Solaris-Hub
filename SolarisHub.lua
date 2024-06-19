@@ -1,4 +1,5 @@
 local StarterGui = game:GetService("StarterGui")
+local UserInputService = game:GetService("UserInputService")
 
 local function PrisonLife()
    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
@@ -256,9 +257,21 @@ end)
    end)
 
    CreditsSection:NewButton("Discord Invite", "Invite", function()
-      getgenv().InviteCode = "WYUAaEEbar"
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQLeak/Scripts/main/Discord-Auto-Join.lua"))()
+      StarterGui:SetCore("SendNotification", {
+         Title = "Success copied";
+         Text = "Paste the link into the web browser";
+         Duration = 5;
+      })
+      setclipboard("https://discord.gg/WYUAaEEbar")
    end)
+
+      if UserInputService.TouchEnded then
+         local ToggleBtn = Instance.new("ImageButton")
+
+         ToggleBtn.MouseButton1Click:Connect(function()
+            Library:ToggleUI()
+         end)
+      end
 end
 
 if game.PlaceId == 155615604 then
