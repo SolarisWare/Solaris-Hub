@@ -265,7 +265,7 @@ end)
       setclipboard("https://discord.gg/WYUAaEEbar")
    end)
 
-      if UserInputService.TouchEnded then
+      if UserInputService.TouchEnabled then
          local ToggleBtn = Instance.new("ImageButton")
 
          ToggleBtn.MouseButton1Click:Connect(function()
