@@ -13,11 +13,11 @@ local function PrisonLife()
    local CreditsTab = Window:NewTab("Credits")
 
    local LocalPlayerSection = LocalPlayerTab:NewSection("Local Player")
-   local CombatSection = LocalPlayerTab:NewSection("Combat")
-   local UtilitiesSection = LocalPlayerTab:NewSection("Utilities")
-   local MiscellaneousSection = LocalPlayerTab:NewSection("Miscellaneous")
-   local TeleportationSection = LocalPlayerTab:NewSection("Teleportation")
-   local CreditsSection = LocalPlayerTab:NewSection("Credits")
+   local CombatSection = CombatTab:NewSection("Combat")
+   local UtilitiesSection = UtilitiesTab:NewSection("Utilities")
+   local MiscellaneousSection = MiscellaneousTab:NewSection("Miscellaneous")
+   local TeleportationSection = TeleportationTab:NewSection("Teleportation")
+   local CreditsSection = CreditsTab:NewSection("Credits")
 
    LocalPlayerSection:NewSlider("WalkSpeed", "Makes your faster", 16, 500, function(v)
       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
