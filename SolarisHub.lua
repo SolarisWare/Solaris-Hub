@@ -12,13 +12,6 @@ local function PrisonLife()
    local TeleportationTab = Window:NewTab("Teleportation")
    local CreditsTab = Window:NewTab("Credits")
 
-   LocalPlayerTab:NewSlider("WalkSpeed", "Makes your faster", 500, 16, function(v)
-      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
-   end)
-
-   LocalPlayerTab:NewSlider("JumpPower", "Makes your jump power high", 500, 50, function(v)
-      game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
-   end)
 
     LocalPlayerTab:NewButton("Guards", "Become a guards team", function()
       game.Workspace.Remote.TeamEvent:FireServer("Bright blue")
