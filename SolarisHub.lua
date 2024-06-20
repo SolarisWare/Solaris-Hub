@@ -8,7 +8,6 @@ local function PrisonLife()
    local LocalPlayerTab = DrRayLibrary.newTab("Local Player", "")
    local CombatTab = DrRayLibrary.newTab("Combat", "")
    local UtilitiesTab = DrRayLibrary.newTab("Utilities", "")
-   local MiscellaneousTab = DrRayLibrary.newTab("Miscellaneous", "")
    local TeleportationTab = DrRayLibrary.newTab("Teleportation", "")
    local CreditsTab = DrRayLibrary.newTab("Credits", "")
 
