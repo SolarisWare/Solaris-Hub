@@ -1,6 +1,6 @@
 local function PrisonLife()
    local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
-      
+
    local window = DrRayLibrary:Load("Solaris Hub", "Default")
 
    local LocalPlayerTab = DrRayLibrary.newTab("Local Player", "")
@@ -10,11 +10,11 @@ local function PrisonLife()
    local TeleportationTab = DrRayLibrary.newTab("Teleportation", "")
    local CreditsTab = DrRayLibrary.newTab("Credits", "")
 
-   LocalPlayerTab.newSlider("WalkSpeed", "Makes your faster", 500, function(v)
+   LocalPlayerTab.newSlider("WalkSpeed", "Makes your faster", 500, true, function(v)
       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
    end)
 
-   LocalPlayerTab.newSlider("JumpPower", "Makes your jump power high", 500, function(v)
+   LocalPlayerTab.newSlider("JumpPower", "Makes your jump power high", 500, true, function(v)
       game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
    end)
 
