@@ -1,7 +1,6 @@
 local function PrisonLife()
    local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
-   assert(DrRayLibrary, "Oopps! Rayfield has not been loaded. Maybe try re-joining?") 
-   
+      
    local window = DrRayLibrary:Load("Solaris Hub", "Default")
 
    local LocalPlayerTab = DrRayLibrary.newTab("Local Player", "")
@@ -254,16 +253,7 @@ end)
 end
 
 
-if not game:IsLoaded() then
-   local Library = require(game:GetService("ReplicatedStorage"):WaitForChild("Framework"):WaitForChild("Library"));
-   assert(Library, "Oopps! Library has not been loaded. Maybe try re-joining?") 
-   while not Library.Loaded do wait() end
-   print("Library has been loaded!")
 
-   
-   game.Loaded:Wait()
-
-   if game.PlaceId == 155615604 then
-      PrisonLife()
-   end
+if game.PlaceId == 155615604 then
+   PrisonLife()
 end
