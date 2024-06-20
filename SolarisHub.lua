@@ -176,7 +176,7 @@ local function PrisonLife()
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Start
    end)
 
-   UtilitiesTab.newToggle("Doors", "Toggle for doors", true, function()
+   UtilitiesTab.newToggle("Doors", "Toogle for doors", true, function()
          if game.Workspace:FindFirstChild("Doors") then
             game.Workspace.Doors.Parent = game.Lighting
          else
@@ -184,13 +184,13 @@ local function PrisonLife()
          end
    end)
 
-   UtilitiesTab.newToggle("Fences", "Toggle for fences", true, function()
+   UtilitiesTab.newToggle("Doors", "Toogle for doors", true, function()
       if game.Workspace:FindFirstChild("Prison_Fences") then
          game.Workspace.Prison_Fences.Parent = game.Lighting
       else
          game.Lighting.Prison_Fences.Parent = game.Workspace
       end
-end)
+   end)
 
    TeleportationTab.newButton("Outside Prison", "Teleport to outside prison", function()
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(288.452, 69.999, 2206.731)
