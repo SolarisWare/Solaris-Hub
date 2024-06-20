@@ -22,7 +22,7 @@ local function PrisonLife()
       game.Workspace.Remote.TeamEvent:FireServer("Bright blue")
     end)
 
-    LocalPlayerTab.NewButton("Inmates", "Become a inamtes team", function()
+    LocalPlayerTab.newButton("Inmates", "Become a inamtes team", function()
       game.Workspace.Remote.TeamEvent:FireServer("Bright orange")
     end)
 
