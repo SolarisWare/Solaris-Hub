@@ -1,3 +1,5 @@
+local StarterGui = game:GetService("StarterGui")
+
 local function PrisonLife()
    local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
